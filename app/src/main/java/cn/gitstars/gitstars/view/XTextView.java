@@ -9,12 +9,9 @@ import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-
 import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.utils.XTextUtils;
-
 import java.util.ArrayList;
 
 /**
@@ -31,6 +28,9 @@ public class XTextView extends View {
     private float textSpacingAdd;
     private float textSpacingMult;
     private OnDrawFinishListener onDrawFinishListener = null;
+    private int cnt = 0;
+    private String totalText = "";
+    private long time = 200;
 
     // 定义三个接口
     public interface OnDrawFinishListener {
@@ -98,27 +98,17 @@ public class XTextView extends View {
     private ArrayList<String> contents;
 
     private void init() {
-
         density = getResources().getDisplayMetrics().density;
-
         textPaint = new TextPaint();
         textPaint.setColor(textColor);
         textPaint.setTextSize(textSize);
-
-
     }
-
-    int index = 0;
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
         drawText(canvas);
     }
-
-    private int cnt = 0;
-    private String totalText = "";
 
     private void drawText(Canvas canvas) {
 
@@ -128,7 +118,6 @@ public class XTextView extends View {
         if (((cnt + 1) >= contents.size()) && onDrawFinishListener != null) {
             onDrawFinishListener.OnDrawFinish();
         }
-        Log.i("response", "test=======================" + cnt + "_" + contents.size());
         totalText += contents.get(cnt);
         StaticLayout layout = null;
         if (textAlignment.equals("normal")) {
@@ -140,20 +129,15 @@ public class XTextView extends View {
             layout = new StaticLayout(totalText, textPaint, getWidth() - (int) (20 * density), Layout.Alignment.ALIGN_OPPOSITE, textSpacingMult, textSpacingAdd, true);
 
         }
-
         //从 (10,10)的位置开始绘制
         canvas.translate(10 * density, 10 * density);
-
         layout.draw(canvas);
-
         cnt++;
-
         startText();
     }
 
     public void startText() {
         if (cnt != contents.size()) {
-
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -162,8 +146,6 @@ public class XTextView extends View {
             }, time);
         }
     }
-
-    private long time = 200;
 
     public void setDelayPlayTime(long time) {
         this.time = time;
