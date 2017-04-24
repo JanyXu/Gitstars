@@ -10,14 +10,17 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.TextView;
+
 import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.utils.XTextUtils;
+
 import java.util.ArrayList;
 
 /**
  * Created by zhangyipeng on 16/3/16.
  */
-public class XTextView extends View {
+public class XTextView extends TextView {
 
     private TextPaint textPaint;
     private float density;
@@ -54,7 +57,6 @@ public class XTextView extends View {
         textSize = a.getDimension(R.styleable.XTextView_textSize, 20);
         textSpacingAdd = a.getFloat(R.styleable.XTextView_textSpacingAdd, 0.0F);
         textSpacingMult = a.getFloat(R.styleable.XTextView_textSpacingMult, 1.0F);
-
         this.setWillNotDraw(false);//必须
         init();
     }
@@ -130,10 +132,17 @@ public class XTextView extends View {
 
         }
         //从 (10,10)的位置开始绘制
-        canvas.translate(10 * density, 10 * density);
-        layout.draw(canvas);
+        canvas.translate(getWidth() / 2 - getTextViewLength( totalText), getHeight() / 2);
+        //layout.draw(canvas);
         cnt++;
+        setText(totalText);
         startText();
+    }
+
+    // 计算出该TextView中文字的长度(像素)
+    public float getTextViewLength( String text) {
+        float textLength = textPaint.measureText(text);
+        return textLength;
     }
 
     public void startText() {
@@ -143,7 +152,7 @@ public class XTextView extends View {
                 public void run() {
                     invalidate();
                 }
-            }, time);
+            }, 3000);
         }
     }
 

@@ -3,16 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:fitsSystemWindows="true">
 
-        <cn.gitstars.gitstars.view.XTextView
+        <TextView
             android:id="@+id/link_signup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:textXAlignment="normal"
-            app:textColor="#ff003b"
-            app:textSize="20sp"
-            app:textContent="你好"
-            app:textSpacingMult="1.5"
-            app:textSpacingAdd="0.0"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 </LinearLayout>
