@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+        <cn.gitstars.gitstars.view.XTextView
+            android:id="@+id/link_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:textXAlignment="normal"
+            app:textColor="#ff003b"
+            app:textSize="20sp"
+            app:textContent="你好"
+            app:textSpacingMult="1.5"
+            app:textSpacingAdd="0.0"/>
+</LinearLayout>
