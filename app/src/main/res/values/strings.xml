@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Gitstars</string>
+    <string name="slogan">/**\n * gitStars\n * 我们的征途是星辰大海\n */</string>
+    <string name="jump">跳过</string>
+    <string name="action_settings">Menu</string>
+    <string name="openString">openString</string>
+    <string name="closeString">closeString</string>
 </resources>

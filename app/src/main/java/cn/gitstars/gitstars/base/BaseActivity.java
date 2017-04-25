@@ -2,7 +2,9 @@ package cn.gitstars.gitstars.base;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import cn.gitstars.gitstars.mvp.IView;
@@ -12,7 +14,7 @@ import cn.gitstars.gitstars.utils.LogUtils;
  * Created by GaoSheng on 2016/9/13.
  */
 
-public abstract class BaseActivity<P extends BasePresenter> extends FragmentActivity implements
+public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements
         IView, View.OnClickListener {
     protected View view;
 
@@ -22,7 +24,9 @@ public abstract class BaseActivity<P extends BasePresenter> extends FragmentActi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(getView());
+
         mPresenter = loadPresenter();
         initCommonData();
         initView();
