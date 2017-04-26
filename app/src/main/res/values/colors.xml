@@ -5,4 +5,17 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <color name="icon_native">#272636</color>
+    <color name="icon_white">#eeffffff</color>
+
+    <color name="primary_drawable_light">#8a000000</color>
+    <color name="primary_drawable_dark">#ffffffff</color>
+
+    <color name="gray_light">#45cdcdcd</color>
+    <color name="gray_dark">#90cdcdcd</color>
+
+    <color name="text_gray_s_dark">#90999999</color>
+    <color name="text_gray_m_dark">#90666666</color>
+    <color name="text_gray_l_dark">#90333333</color>
 </resources>

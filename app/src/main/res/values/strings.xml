@@ -5,4 +5,13 @@
     <string name="action_settings">Menu</string>
     <string name="openString">openString</string>
     <string name="closeString">closeString</string>
+
+    <string name="feedback">Feedback</string>
+    <string name="setting">Setting</string>
+    <string name="about">About</string>
+    <string name="close">close</string>
+
+    <string name="project">项目</string>
+    <string name="fans">粉丝</string>
+    <string name="attention">关注</string>
 </resources>

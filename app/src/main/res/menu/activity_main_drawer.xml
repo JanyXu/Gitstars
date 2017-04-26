@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_descover"
+            android:icon="@drawable/v_magnify_dark_x24"
+            android:title="Descover"
+            android:checkable="true"/>
+        <item
+            android:id="@+id/nav_hot"
+            android:icon="@drawable/v_home_dark_x24"
+            android:title="最热"
+            android:checkable="true"/>
+        <item
+            android:id="@+id/nav_trending"
+            android:icon="@drawable/v_magnify_dark_x24"
+            android:title="Trending"
+            android:checkable="true"/>
+        <item
+            android:id="@+id/nav_star"
+            android:icon="@drawable/v_magnify_dark_x24"
+            android:title="Star"
+            android:checkable="true"/>
+        <item
+            android:id="@+id/nav_welfare"
+            android:icon="@drawable/v_magnify_dark_x24"
+            android:title="Welfare"
+            android:checkable="true"/>
+        <item
+            android:id="@+id/nav_more"
+            android:icon="@drawable/v_magnify_dark_x24"
+            android:title="More"
+            android:checkable="true"/>
+    </group>
+
+</menu>
