@@ -1,4 +1,4 @@
-package cn.gitstars.gitstars.activity;
+package cn.gitstars.gitstars.view.widget.activity;
 
 import android.os.Handler;
 import android.os.Message;

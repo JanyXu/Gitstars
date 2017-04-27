@@ -20,7 +20,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashActivity"
+        <activity
+            android:name=".view.widget.activity.MeActivity"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,10 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:launchMode="singleTask">
-        </activity>
+        <activity
+            android:name=".view.widget.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity android:name=".view.widget.activity.SplashActivity"></activity>
     </application>
 
 </manifest>

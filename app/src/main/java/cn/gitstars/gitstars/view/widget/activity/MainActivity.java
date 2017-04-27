@@ -1,22 +1,29 @@
-package cn.gitstars.gitstars.activity;
+package cn.gitstars.gitstars.view.widget.activity;
 
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import cn.gitstars.gitstars.ProApplication;
 import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.base.BaseActivity;
 import cn.gitstars.gitstars.presenter.MainPresenter;
 import cn.gitstars.gitstars.utils.ToastUtil;
+import cn.gitstars.gitstars.view.widget.adapter.MenuAdapter;
 
 /**
  * Created by JanyXu on 2017/04/25.
@@ -32,6 +39,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
     NavigationView navigation_start;
     @InjectView(R.id.navigation_end)
     NavigationView navigation_end;
+    @InjectView(R.id.rv_menu_item)
+    RecyclerView rv_menu_item;
     Button btn_close;
 
     @Override
@@ -41,7 +50,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
 
     @Override
     protected void initData() {
-
+        rv_menu_item.setLayoutManager(new LinearLayoutManager(this));
+        MenuAdapter menuAdapter = new MenuAdapter();
+        rv_menu_item.setAdapter(menuAdapter);
     }
 
     @Override
@@ -52,8 +63,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
     @Override
     protected void initView() {
         ButterKnife.inject(this);
-        //ButterKnife.inject(this,navigation_end.getHeaderView(0));
-//        btn_close = ButterKnife.findById(navigation_end.getHeaderView(0), R.id.btn_close);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setTitle("首页");
         toolbar.setOnCreateContextMenuListener(this);
@@ -75,7 +84,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
                         return true;
                     }
                 });
-        //btn_close.setOnClickListener(this);
     }
 
     @Override

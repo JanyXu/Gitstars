@@ -1,4 +1,4 @@
-package cn.gitstars.gitstars.view;
+package cn.gitstars.gitstars.view.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

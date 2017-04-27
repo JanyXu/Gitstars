@@ -1,11 +1,8 @@
 package cn.gitstars.gitstars.presenter;
 
-import cn.gitstars.gitstars.activity.SplashActivity;
+import cn.gitstars.gitstars.view.widget.activity.SplashActivity;
 import cn.gitstars.gitstars.base.BasePresenter;
-import cn.gitstars.gitstars.contract.LoginContract;
-import cn.gitstars.gitstars.model.LoginModel;
 import cn.gitstars.gitstars.mvp.IModel;
-import cn.gitstars.gitstars.utils.LogUtils;
 
 import java.util.HashMap;
 

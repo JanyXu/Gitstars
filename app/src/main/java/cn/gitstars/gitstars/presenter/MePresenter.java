@@ -2,15 +2,15 @@ package cn.gitstars.gitstars.presenter;
 
 import java.util.HashMap;
 
-import cn.gitstars.gitstars.view.widget.activity.MainActivity;
 import cn.gitstars.gitstars.base.BasePresenter;
 import cn.gitstars.gitstars.mvp.IModel;
+import cn.gitstars.gitstars.view.widget.activity.MainActivity;
 
 /**
- * Created by JanyXu on 2017/04/25.
+ * Created by Administrator on 2017/4/27.
  */
 
-public class MainPresenter extends BasePresenter<MainActivity> {
+public class MePresenter extends BasePresenter<MainActivity> {
 
     @Override
     public HashMap<String, IModel> getiModelMap() {

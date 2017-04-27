@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tweetName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/img"
+    android:drawablePadding="@dimen/activity_horizontal_margin"
+    android:gravity="center"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:textColor="@color/text_gray_m_dark"
+    android:textSize="@dimen/textSize_m" />
