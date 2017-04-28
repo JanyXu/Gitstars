@@ -55,7 +55,8 @@
                 android:id="@+id/rv_menu_item"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:overScrollMode="never"/>
             <include layout="@layout/setting_footer" />
         </LinearLayout>
     </android.support.design.widget.NavigationView>

@@ -3,7 +3,7 @@ package cn.gitstars.gitstars.utils;
 import android.content.Context;
 import android.content.Intent;
 
-import cn.gitstars.gitstars.view.widget.activity.MainActivity;
+import cn.gitstars.gitstars.view.activity.MainActivity;
 
 /**
  * Created by Administrator on 2017/4/25.

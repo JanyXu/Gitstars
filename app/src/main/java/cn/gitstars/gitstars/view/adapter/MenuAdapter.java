@@ -1,4 +1,4 @@
-package cn.gitstars.gitstars.view.widget.adapter;
+package cn.gitstars.gitstars.view.adapter;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;

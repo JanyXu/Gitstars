@@ -1,16 +1,16 @@
 package cn.gitstars.gitstars.presenter;
 
-import cn.gitstars.gitstars.view.activity.SplashActivity;
-import cn.gitstars.gitstars.base.BasePresenter;
-import cn.gitstars.gitstars.mvp.IModel;
-
 import java.util.HashMap;
 
+import cn.gitstars.gitstars.base.BasePresenter;
+import cn.gitstars.gitstars.mvp.IModel;
+import cn.gitstars.gitstars.view.fragment.TrendingFragment;
+
 /**
- * Created by JanyXu on 2017/04/25.
+ * Created by Administrator on 2017/4/28.
  */
 
-public class SplashPresenter extends BasePresenter<SplashActivity> {
+public class TrendingPresenter  extends BasePresenter<TrendingFragment> {
 
     @Override
     public HashMap<String, IModel> getiModelMap() {

@@ -1,6 +1,5 @@
-package cn.gitstars.gitstars.view.widget.activity;
+package cn.gitstars.gitstars.view.activity;
 
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,17 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import cn.gitstars.gitstars.ProApplication;
 import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.base.BaseActivity;
 import cn.gitstars.gitstars.presenter.MainPresenter;
 import cn.gitstars.gitstars.utils.ToastUtil;
-import cn.gitstars.gitstars.view.widget.adapter.MenuAdapter;
+import cn.gitstars.gitstars.view.adapter.MenuAdapter;
+import cn.gitstars.gitstars.view.fragment.TrendingFragment;
 
 /**
  * Created by JanyXu on 2017/04/25.
@@ -84,6 +80,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
                         return true;
                     }
                 });
+        TrendingFragment trendingFragment = new TrendingFragment();
+        addFragment(trendingFragment,R.id.frame_content);
     }
 
     @Override

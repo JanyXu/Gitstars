@@ -2,7 +2,7 @@ package cn.gitstars.gitstars.presenter;
 
 import java.util.HashMap;
 
-import cn.gitstars.gitstars.view.widget.activity.MainActivity;
+import cn.gitstars.gitstars.view.activity.MainActivity;
 import cn.gitstars.gitstars.base.BasePresenter;
 import cn.gitstars.gitstars.mvp.IModel;
 

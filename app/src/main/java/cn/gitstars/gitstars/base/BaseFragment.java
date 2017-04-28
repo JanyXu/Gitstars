@@ -32,7 +32,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
         initView();
         initListener();
         initData();
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return  view;
     }
 
     @Override
