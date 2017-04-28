@@ -2,11 +2,13 @@ package cn.gitstars.gitstars.view.activity;
 
 import android.graphics.Color;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,9 +18,11 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.base.BaseActivity;
+import cn.gitstars.gitstars.base.BaseFragment;
 import cn.gitstars.gitstars.presenter.MainPresenter;
 import cn.gitstars.gitstars.utils.ToastUtil;
 import cn.gitstars.gitstars.view.adapter.MenuAdapter;
+import cn.gitstars.gitstars.view.fragment.SignFragment;
 import cn.gitstars.gitstars.view.fragment.TrendingFragment;
 
 /**
@@ -37,7 +41,10 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
     NavigationView navigation_end;
     @InjectView(R.id.rv_menu_item)
     RecyclerView rv_menu_item;
+    @InjectView(R.id.btn_close)
     Button btn_close;
+    @InjectView(R.id.btn_sign)
+    Button btn_sign;
 
     @Override
     protected MainPresenter loadPresenter() {
@@ -53,7 +60,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
 
     @Override
     protected void initListener() {
-
+        btn_close.setOnClickListener(this);
+        btn_sign.setOnClickListener(this);
     }
 
     @Override
@@ -80,8 +88,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
                         return true;
                     }
                 });
-        TrendingFragment trendingFragment = new TrendingFragment();
-        addFragment(trendingFragment,R.id.frame_content);
+        changeFragment(new TrendingFragment());
     }
 
     @Override
@@ -93,9 +100,25 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
     protected void otherViewClick(View view) {
         switch (view.getId()) {
             case R.id.btn_close:
-                ToastUtil.setToast("ggg");
+                closeDrawable();
+                toolbar.setTitle("首页");
+                break;
+            case R.id.btn_sign:
+                changeFragment(new SignFragment());
+                closeDrawable();
+                toolbar.setTitle("");
                 break;
         }
+    }
+
+    private void closeDrawable() {
+        if (drawer_layout.isDrawerOpen(GravityCompat.END)) {
+            drawer_layout.closeDrawer(GravityCompat.END);
+        }
+    }
+
+    private void changeFragment(Fragment fragment) {
+        addFragment(fragment, R.id.frame_content);
     }
 
     @Override

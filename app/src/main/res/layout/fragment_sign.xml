@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.gitstars.gitstars.view.fragment.SignFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/activity_horizontal_margin_l"
+        android:textColor="@color/text_gray_m_dark"
+        android:textSize="@dimen/textSize_xl"
+        android:text="@string/no_sign"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/activity_horizontal_margin_l"
+        android:textColor="@color/text_gray_m_dark"
+        android:textSize="@dimen/textSize_l"
+        android:text="@string/sign_desc"/>
+
+    <Button
+        android:id="@+id/btn_sign"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/text_gray_m_dark"
+        android:textSize="@dimen/textSize_m"
+        android:layout_margin="@dimen/activity_horizontal_margin_l"
+        android:text="@string/sign_in"
+        android:background="@drawable/sign_in_back"/>
+
+
+
+</LinearLayout>

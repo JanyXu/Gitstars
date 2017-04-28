@@ -7,20 +7,8 @@
         <item>Star</item>
         <item>福利</item>
         <item>More</item>
-        <item>Descover </item>
-        <item>最热</item>
-        <item>Trending</item>
-        <item>Star</item>
-        <item>福利</item>
-        <item>More</item>
     </string-array>
     <string-array name="menuImgRes">
-        <item>@drawable/girl</item>
-        <item>@drawable/girl</item>
-        <item>@drawable/girl</item>
-        <item>@drawable/girl</item>
-        <item>@drawable/girl</item>
-        <item>@drawable/girl</item>
         <item>@drawable/girl</item>
         <item>@drawable/girl</item>
         <item>@drawable/girl</item>

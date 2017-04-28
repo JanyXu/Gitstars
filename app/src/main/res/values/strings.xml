@@ -15,6 +15,10 @@
     <string name="fans">粉丝</string>
     <string name="attention">关注</string>
 
+    <string name="no_sign">未登录</string>
+    <string name="sign_in">sign in</string>
+    <string name="sign_desc">请使用github账号登录\n来导入你的star项目</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
