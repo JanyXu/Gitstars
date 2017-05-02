@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -20,6 +21,7 @@ import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.base.BaseActivity;
 import cn.gitstars.gitstars.base.BaseFragment;
 import cn.gitstars.gitstars.presenter.MainPresenter;
+import cn.gitstars.gitstars.utils.ActivitySwitch;
 import cn.gitstars.gitstars.utils.ToastUtil;
 import cn.gitstars.gitstars.view.adapter.MenuAdapter;
 import cn.gitstars.gitstars.view.fragment.SignFragment;
@@ -45,6 +47,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
     Button btn_close;
     @InjectView(R.id.btn_sign)
     Button btn_sign;
+    @InjectView(R.id.ll_setting)
+    LinearLayout ll_setting;
 
     @Override
     protected MainPresenter loadPresenter() {
@@ -62,6 +66,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
     protected void initListener() {
         btn_close.setOnClickListener(this);
         btn_sign.setOnClickListener(this);
+        ll_setting.setOnClickListener(this);
     }
 
     @Override
@@ -107,6 +112,10 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
                 changeFragment(new SignFragment());
                 closeDrawable();
                 toolbar.setTitle("");
+                break;
+            case R.id.ll_setting:
+                closeDrawable();
+                ActivitySwitch.mainToMe(this);
                 break;
         }
     }

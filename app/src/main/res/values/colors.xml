@@ -18,4 +18,6 @@
     <color name="text_gray_s_dark">#90999999</color>
     <color name="text_gray_m_dark">#90666666</color>
     <color name="text_gray_l_dark">#90333333</color>
+
+    <color name="sample_yellow">#ff8800</color>
 </resources>

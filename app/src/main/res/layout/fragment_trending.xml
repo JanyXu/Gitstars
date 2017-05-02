@@ -1,9 +1,99 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.fragment.TrendingFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Language"
+                android:textColor="@color/text_gray_m_dark"
+                android:textSize="@dimen/textSize_m" />
+
+            <TextView
+                android:id="@+id/tv_selectLanguage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center_vertical"
+                android:text="All"
+                android:textColor="@color/text_gray_m_dark"
+                android:textSize="@dimen/textSize_m" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/text_gray_l_dark"
+                android:textSize="@dimen/textSize_m" />
+
+            <ImageButton
+                android:id="@+id/ib_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/gray_light"
+                android:gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:textColor="@color/text_gray_m_dark"
+                android:textSize="@dimen/textSize_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone">
+
+            <cn.gitstars.gitstars.view.widget.ClearEditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:src="@mipmap/ic_launcher"
+                android:textColor="@color/text_gray_m_dark"
+                android:textSize="@dimen/textSize_m" />
+
+            <Button
+                android:id="@+id/btn_search_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_light"
+                android:gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:textColor="@color/text_gray_m_dark"
+                android:textSize="@dimen/textSize_m" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/sr_trending"
@@ -19,4 +109,4 @@
 
         </android.support.v7.widget.RecyclerView>
     </android.support.v4.widget.SwipeRefreshLayout>
-</FrameLayout>
+</LinearLayout>

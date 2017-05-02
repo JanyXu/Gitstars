@@ -43,7 +43,6 @@ public class MeActivity extends BaseActivity<MePresenter> implements View.OnClic
         setSupportActionBar(toolbar);
         //显示左上角的返回按钮
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 //        设置一些recyclerView的内容
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
@@ -56,7 +55,12 @@ public class MeActivity extends BaseActivity<MePresenter> implements View.OnClic
         recyclerView.setHasFixedSize(true);
         MenuAdapter mAdapter = new MenuAdapter();
         recyclerView.setAdapter(mAdapter);
-
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override
