@@ -29,7 +29,7 @@ public class MenuAdapter extends BaseQuickAdapter<MenuItem, BaseViewHolder> {
             img_off = res.getDrawable(item.getMenuImgRes());
             img_off.setBounds(0, 0, img_off.getMinimumWidth(), img_off.getMinimumHeight());
             ((TextView) helper.getView(R.id.tweetName)).setCompoundDrawables(img_off, null, null, null);
-
+            //((TextView) helper.getView(R.id.tweetName)).getBackground().setAlpha(0);
         } catch (Exception e) {
 
         }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_horizontal_margin"
+    android:background="@drawable/selector_holo_blue_bottom_line"
+    android:drawableLeft="@drawable/v_file_gray_x24"
+    android:drawablePadding="@dimen/activity_horizontal_margin"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:textColor="@color/icon_native">
+
+</TextView>

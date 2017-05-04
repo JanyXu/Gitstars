@@ -6,6 +6,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -23,11 +24,12 @@ import butterknife.InjectView;
 import cn.gitstars.gitstars.R;
 import cn.gitstars.gitstars.base.BaseFragment;
 import cn.gitstars.gitstars.presenter.TrendingPresenter;
+import cn.gitstars.gitstars.utils.ActivitySwitch;
 import cn.gitstars.gitstars.utils.ToastUtil;
 import cn.gitstars.gitstars.utils.Utils;
 import cn.gitstars.gitstars.view.adapter.MenuAdapter;
 
-public class TrendingFragment extends BaseFragment<TrendingPresenter> implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener, View.OnTouchListener {
+public class TrendingFragment extends BaseFragment<TrendingPresenter> implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener, View.OnTouchListener ,BaseQuickAdapter.OnItemClickListener{
     @InjectView(R.id.rv_trending)
     RecyclerView rv_trending;
     @InjectView(R.id.sr_trending)
@@ -68,6 +70,7 @@ public class TrendingFragment extends BaseFragment<TrendingPresenter> implements
         sr_trending.setOnRefreshListener(this);
         menuAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
         rv_trending.setAdapter(menuAdapter);
+        menuAdapter.setOnItemClickListener(this);
     }
 
     @Override
@@ -124,6 +127,13 @@ public class TrendingFragment extends BaseFragment<TrendingPresenter> implements
         anim.setInterpolator(new AccelerateDecelerateInterpolator());
         anim.start();
         return anim;
+    }
+
+    @Override
+    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+        Log.i("response","test=1");
+        ActivitySwitch.trendingToHierchy(getContext());
+        Log.i("response","test=2");
     }
 }
 

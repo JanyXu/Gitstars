@@ -22,8 +22,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.activity.MainActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"    >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,8 +33,9 @@
         <activity
             android:name=".view.activity.MeActivity"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
-        <activity android:name=".view.activity.SplashActivity"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".view.activity.SplashActivity" />
+        <activity android:name=".view.activity.HierarchyActivity"></activity>
     </application>
 
 </manifest>

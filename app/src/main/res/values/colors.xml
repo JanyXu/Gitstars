@@ -20,4 +20,11 @@
     <color name="text_gray_l_dark">#90333333</color>
 
     <color name="sample_yellow">#ff8800</color>
+
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_blue_light_transparent1">#bb33b5e5</color>
+    <color name="holo_blue_light_transparent2">#5533b5e5</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="transparent">#01000000</color>
+
 </resources>
